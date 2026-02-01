@@ -14,4 +14,5 @@ async def index():
 @app.post("/")
 async def calc(data: Data):
     z = data.x * data.y
+    print(f"received: x={data.x}, y={data.y}")
     return {"result": z}
